@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -13,14 +13,14 @@ import apidemyApp from './apidemy/reducers';
 
 const store = createStore(apidemyApp, {}, applyMiddleware(reduxThunk));
 console.log('process', process)
-console.log('public url',process.env.PUBLIC_URL)
+console.log('public url',process.env)
 
 export default (
   <Provider store={store}>
-    <HashRouter>
+    <BrowserRouter>
       <Switch>
         <Route path='/apidemy'  component={ApidemyApp} />
       </Switch>
-    </HashRouter>
+    </BrowserRouter>
   </Provider>
 );

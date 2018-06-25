@@ -10,7 +10,8 @@
   "scripts": {
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
-    "build": "wepback"
+    "build": "webpack",
+    "start": "nodemon './node_modules/webpack-dev-server/bin/webpack-dev-server.js'"
   },
   "dependencies": {
     "babel-core": "^6.26.3",

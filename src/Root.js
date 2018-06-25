@@ -14,16 +14,14 @@ console.log('ApidemyApp component in Root.js', ApidemyApp)
 
 const store = createStore(apidemyApp, {}, applyMiddleware(reduxThunk));
 
-const appy = () => <div>base app</div>;
-const crappy = () => <div>crappy</div>;
+
 
 export default (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path='/apidemy' exact component={ApidemyApp} />
-        <Route path='/crappy' component={crappy} />
-        <Route path='/' component={appy} />
+
       </Switch>
     </BrowserRouter>
   </Provider>

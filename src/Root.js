@@ -12,7 +12,7 @@ import apidemyApp from './apidemy/reducers';
 
 
 const store = createStore(apidemyApp, {}, applyMiddleware(reduxThunk));
-
+console.log('process', process)
 console.log('public url',process.env.PUBLIC_URL)
 
 export default (

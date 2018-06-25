@@ -19,8 +19,7 @@ export default (
   <Provider store={store}>
     <HashRouter>
       <Switch>
-        <Route path='/apidemy' exact component={ApidemyApp} />
-
+        <Route path='/apidemy'  component={ApidemyApp} />
       </Switch>
     </HashRouter>
   </Provider>

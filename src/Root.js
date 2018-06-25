@@ -12,15 +12,10 @@ import apidemyApp from './apidemy/reducers';
 
 
 const store = createStore(apidemyApp, {}, applyMiddleware(reduxThunk));
-console.log('process', process)
-console.log('public url',process.env)
+
 
 export default (
   <Provider store={store}>
-    <BrowserRouter basename='https://samhinton88.github.io/dist/'>
-      <Switch>
-        <Route path='/'  component={ApidemyApp} />
-      </Switch>
-    </BrowserRouter>
+    <ApidemyApp />
   </Provider>
 );

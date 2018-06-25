@@ -19,7 +19,7 @@ export default (
   <Provider store={store}>
     <BrowserRouter basename='https://samhinton88.github.io/dist/'>
       <Switch>
-        <Route path='/apidemy'  component={ApidemyApp} />
+        <Route path='/'  component={ApidemyApp} />
       </Switch>
     </BrowserRouter>
   </Provider>

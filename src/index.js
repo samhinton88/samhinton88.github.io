@@ -1,3 +1,4 @@
+require('dotenv').config();
 import rootApp from './Root';
 import ReactDOM from 'react-dom';
 

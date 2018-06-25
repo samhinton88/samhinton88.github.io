@@ -1,6 +1,6 @@
 {
   "name": "samhinton88.github.io",
-  "homepage": "https://samhinton88.github.io/",
+  "homepage": "https://samhinton88.github.io",
   "version": "1.0.0",
   "description": "Client showcase",
   "main": "index.js",
@@ -19,6 +19,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
+    "gh-pages": "^1.2.0",
     "nodemon": "^1.17.5",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",

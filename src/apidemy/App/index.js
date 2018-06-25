@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DisplayBoard from '../components/DisplayBoard';
 
 class App extends Component {
 

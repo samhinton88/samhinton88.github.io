@@ -9,12 +9,11 @@ import ApidemyApp from './apidemy/App';
 
 import apidemyApp from './apidemy/reducers';
 
-console.log('apidemyApp reducer in Root.js',apidemyApp)
-console.log('ApidemyApp component in Root.js', ApidemyApp)
+
 
 const store = createStore(apidemyApp, {}, applyMiddleware(reduxThunk));
 
-
+console.log('public url',process.env.PUBLIC_URL)
 
 export default (
   <Provider store={store}>

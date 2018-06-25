@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter, Route, Switch } from 'react-router-dom';
 import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
@@ -17,11 +17,11 @@ console.log('public url',process.env.PUBLIC_URL)
 
 export default (
   <Provider store={store}>
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Switch>
         <Route path='/apidemy' exact component={ApidemyApp} />
 
       </Switch>
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
 );

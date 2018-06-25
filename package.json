@@ -1,0 +1,20 @@
+{
+  "name": "samhinton88.github.io",
+  "version": "1.0.0",
+  "description": "Client showcase",
+  "main": "index.js",
+  "repository": "https://github.com/samhinton88/samhinton88.github.io",
+  "author": "sam hinton <sam.hinton88@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "redux": "^4.0.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

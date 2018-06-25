@@ -17,7 +17,7 @@ console.log('public url',process.env)
 
 export default (
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename='https://samhinton88.github.io/dist/'>
       <Switch>
         <Route path='/apidemy'  component={ApidemyApp} />
       </Switch>

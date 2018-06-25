@@ -6,7 +6,17 @@
   "repository": "https://github.com/samhinton88/samhinton88.github.io",
   "author": "sam hinton <sam.hinton88@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "nodemon": "^1.17.5",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",

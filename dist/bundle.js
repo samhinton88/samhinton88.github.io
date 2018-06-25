@@ -1321,7 +1321,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _Root = __webpack_require__(/*! ./Root */ \"./src/Root.js\");\n\nvar _Root2 = _interopRequireDefault(_Root);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n__webpack_require__(/*! dotenv */ \"./node_modules/dotenv/lib/main.js\").config();\n\n\nconsole.log('ROOTAPP', _Root2.default);\n\n_reactDom2.default.render(_Root2.default, document.getElementById('root'));\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _dotenv = __webpack_require__(/*! dotenv */ \"./node_modules/dotenv/lib/main.js\");\n\nvar _dotenv2 = _interopRequireDefault(_dotenv);\n\nvar _Root = __webpack_require__(/*! ./Root */ \"./src/Root.js\");\n\nvar _Root2 = _interopRequireDefault(_Root);\n\nvar _reactDom = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n_dotenv2.default.config();\n\n\nconsole.log('ROOTAPP', _Root2.default);\n\n_reactDom2.default.render(_Root2.default, document.getElementById('root'));\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 

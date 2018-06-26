@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import style from './style.css';
 
+import ReviewCard from '../ReviewCard';
 import Banner from '../Banner';
 
 class MerchCoursePage extends Component {
@@ -47,9 +48,11 @@ class MerchCoursePage extends Component {
           </div>
           <div className='merch-course-page-body-right'>
             <h2>Course Structure</h2>
-            <ul>
-              {this.renderCourseStructure()}
-            </ul>
+            <div className='course-structure-container'>
+              <ul>
+                {this.renderCourseStructure()}
+              </ul>
+            </div>
           </div>
         </div>
       </div>

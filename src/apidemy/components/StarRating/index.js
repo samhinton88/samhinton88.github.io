@@ -1,4 +1,5 @@
 import React from 'react';
+import style from './style.css';
 
 export const StarRating = ({rating}) => {
 
@@ -9,7 +10,7 @@ export const StarRating = ({rating}) => {
     }
 
     for (let i=0; i<(5 - rating); i++) {
-      output.push(<span key={i} className='fa fa-star' />)
+      output.push(<span key={i} className='fa fa-star empty' />)
     }
 
     return output;

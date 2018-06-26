@@ -1,0 +1,12 @@
+.ranking-row {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.active {
+  background: rgba(100, 100, 240, 1);
+  color: white;
+  border-radius: 3px;
+}

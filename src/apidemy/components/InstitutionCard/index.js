@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import style from './style.css'
 
+import {StarRating} from '../StarRating';
+
 class InstitutionCard extends Component {
 
 
@@ -21,17 +23,11 @@ class InstitutionCard extends Component {
   }
 
   renderStars = () => {
-    const { rating, courseName } = this.props.data;
-    const output = [];
+    const { rating } = this.props.data;
 
-    for (let i=0; i<rating; i++) {
-      output.push(<span key={i + courseName} className='fa fa-star checked' />)
-    }
 
-    for (let i=0; i<(5 - rating); i++) {
-      output.push(<span key={i + 5 + courseName} className='fa fa-star' />)
-    }
-    return output;
+    return <StarRating rating={rating} />
+
   }
 
   render() {

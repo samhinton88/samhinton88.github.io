@@ -1,0 +1,27 @@
+.review-card {
+  display: flex;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+
+}
+
+.review-card-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-card-right {
+  padding-left: 20px;
+}
+
+.review-card-details {
+
+}
+
+.review-card-content {
+  margin-left: 10px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.8);
+}

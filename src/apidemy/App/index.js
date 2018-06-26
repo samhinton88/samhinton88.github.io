@@ -31,6 +31,7 @@ class App extends Component {
           }
         >
           <h2 style={{fontSize: '42px'}}>Apidemy</h2>
+          <span className='value-proposition'>Education beyond Borders</span>
           <input className='search-bar' placeholder='search courses and schools...'/>
 
         </div>
@@ -60,10 +61,14 @@ class App extends Component {
             data={
               {
                 badges: ['satisfied', 'leader'],
+                rating: 5,
                 courses: [
                   {style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Newcastle University', courseName: 'Business Studies', rating: 4, noOfRatings: 300, author: 'Ian Jones'},
                   {style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Newcastle University', courseName: 'Medicine', rating: 5, noOfRatings: 2009, author: 'Will Bower'},
                   {style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Newcastle University', courseName: 'Law', rating: 4, noOfRatings: 376, author: 'Sally Jennings'},
+                ],
+                reviews: [
+                  {author: 'Sam Hinton', title: 'Really Friendly', content: 'I came here for a short course about business and I loved it.', rating: 5, courseName: 'Business'}
                 ]
               }
             }

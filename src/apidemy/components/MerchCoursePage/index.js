@@ -5,7 +5,18 @@ import Banner from '../Banner';
 
 class MerchCoursePage extends Component {
 
+  renderCourseStructure = () => {
+    const { courseStructure } = this.props.data;
 
+    return courseStructure.map((cs) => {
+      return (
+        <li className='course-structure-item' key={cs}>
+          <i className='fas fa-certificate course-structure-bullet'/>
+          <span className='course-structure-item-detail'>{cs}</span>
+        </li>
+      )
+    })
+  }
 
   render() {
     const {
@@ -31,10 +42,14 @@ class MerchCoursePage extends Component {
         />
         <div className='merch-course-page-body'>
           <div className='merch-course-page-body-left'>
+            <h2>Summary</h2>
             <p>{courseSummary}</p>
           </div>
           <div className='merch-course-page-body-right'>
-            <p>{courseStructure}</p>
+            <h2>Course Structure</h2>
+            <ul>
+              {this.renderCourseStructure()}
+            </ul>
           </div>
         </div>
       </div>

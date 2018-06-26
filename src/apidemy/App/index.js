@@ -92,12 +92,22 @@ class App extends Component {
           through our strong emphasis on practical real-world business experience.
           This is via the use of case-study-led teaching and work experience opportunities
           with globally recognised companies,
-          like IBM, Disney and Siemens.`,
+          like IBM, Disney and Siemens. This builds your business awareness and
+          helps you develop personal and professional skills. We place a strong
+          emphasis on helping you develop practical skills for your future career.`,
           rating: 5,
           institutionName: 'University of Warwick',
           courseName: 'Business Management BA Honours',
           price: 2000,
-          courseStructure: 'llalal'}}
+          courseStructure:
+            [
+              'ACC1003 Introduction to Accounting and Finance',
+              'BUS1002 Global Business Environment',
+              'BUS1004 Understanding Business Growth',
+              'BUS1015 Management and Organisation',
+              'BUS1016 Academic and Professional Skill Development',
+            ]
+          }}
           />
 
 

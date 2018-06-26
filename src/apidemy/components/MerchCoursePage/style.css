@@ -1,3 +1,7 @@
+.merch-course-page {
+  font-family: helvetica;
+}
+
 .merch-course-page-body {
   display: flex;
   justify-content: space-between;
@@ -5,8 +9,29 @@
 
 .merch-course-page-body-left {
   padding: 20px;
+  max-width: 500px;
+
 }
 
 .merch-course-page-body-right {
   padding: 20px;
+  width: 50%;
+  list-style-type: none;
+}
+ul {
+  list-style-type: none;
+}
+
+.course-structure-bullet {
+  color: #0065B0;
+}
+
+.course-structure-item-detail {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  color: rgba(10, 10, 10, 0.7);
+}
+
+.course-structure-item {
+  margin-bottom: 10px;
 }

@@ -13,3 +13,15 @@
   width: 50px;
   height: 50px;
 }
+
+.nav-bar-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-courses-link {
+  margin-right: 10px;
+  font: 15px helvetica ;
+  color: rgba(0, 0, 0, 0.6);
+}

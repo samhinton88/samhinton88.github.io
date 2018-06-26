@@ -4,6 +4,7 @@ import InstitutionCard from '../components/InstitutionCard';
 import NavBarTop from '../components/NavBarTop';
 import SearchFilterBar from '../components/SearchFilterBar';
 import InstitutionPage from '../components/InstitutionPage';
+import MerchCoursePage from '../components/MerchCoursePage';
 import style from './style.css'
 
 
@@ -85,6 +86,9 @@ class App extends Component {
             }
           />
         </div>
+        <MerchCoursePage data={{courseSummary: 'lalala', courseStructure: 'llalal'}}/>
+
+
 
 
 

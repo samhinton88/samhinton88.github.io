@@ -106,6 +106,19 @@ class App extends Component {
               'BUS1004 Understanding Business Growth',
               'BUS1015 Management and Organisation',
               'BUS1016 Academic and Professional Skill Development',
+            ],
+          reviews:
+            [
+              {
+                author: 'William Wallace',
+                title: 'Changed My Life',
+                content:
+                  `The BA in business is really amazing, it covers everything you
+                  need to know about getting a job in the world of business. I got
+                  an administration job straight out of school and I'm on course
+                  to do an MBA next autumn`,
+                rating: 4, courseName: 'Business Management BA Honours'
+              }
             ]
           }}
           />

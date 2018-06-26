@@ -19,6 +19,12 @@ class MerchCoursePage extends Component {
     })
   }
 
+  renderReviews = () => {
+    const { reviews } = this.props.data;
+
+    return reviews.map((r, i) => <ReviewCard data={r} key={r.title + i}/>)
+  }
+
   render() {
     const {
       courseSummary,
@@ -54,6 +60,10 @@ class MerchCoursePage extends Component {
               </ul>
             </div>
           </div>
+        </div>
+        <div className='merch-course-page-review-section'>
+          <h2>Reviews</h2>
+          {this.renderReviews()}
         </div>
       </div>
     )

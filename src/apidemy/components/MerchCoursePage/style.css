@@ -50,3 +50,10 @@ ul {
 .course-structure-item-detail:hover {
   color: rgba(10, 10, 10, 1)
 }
+
+.merch-course-page-review-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

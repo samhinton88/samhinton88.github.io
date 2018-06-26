@@ -39,18 +39,18 @@ class InstitutionCard extends Component {
 
     return (
       <div className='institution-card'>
-        <div className='institution-card-head' style={{background: `rgba(${r},${g}, ${b}, 1)`}}>
+        <div className='institution-card-head' style={{backgroundImage: `linear-gradient(to right, rgba(${r},${g}, ${b}, 0.5), rgba(200, 200, 200, 0.7), rgba(${r},${g}, ${b}, 1))`}}>
           <svg height='100' width='200'>
             <circle cx='70' cy='50' r='30' fill='white'/>
             <circle cx='90' cy='70' r='20' fill='white'/>
             {this.renderGraphic()}
             {isTop ? <text x='130' y='40' r='5' fill='white' style={{font: 'bold 10px helvetica'}}>TOP SCHOOL</text> : ''}
-            {isTop ? <span className='fa fa-certificate'>{'\f0a3'}</span>: ''}
           </svg>
+
         </div>
         <div className='institution-card-body'>
           <div className='institution-card-body-merchandising'>
-            <h3>{institutionName}</h3>
+            <h3 className='institution-card-name'>{institutionName}</h3>
             <p>{courseName}</p>
             <p className='author-text'>{author}</p>
             <div className='institution-card-rating'>

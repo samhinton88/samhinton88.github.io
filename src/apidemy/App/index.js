@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import DisplayBoard from '../components/DisplayBoard';
 import InstitutionCard from '../components/InstitutionCard';
 import NavBarTop from '../components/NavBarTop';
+import SearchFilterBar from '../components/SearchFilterBar';
+import InstitutionPage from '../components/InstitutionPage';
 import style from './style.css'
 
 
@@ -32,6 +34,12 @@ class App extends Component {
           <input className='search-bar' placeholder='search courses and schools...'/>
 
         </div>
+        <div className='search-result-filter-bar-wrapper'>
+          <SearchFilterBar />
+        </div>
+
+
+
         <div className='search-result-container-wrapper'>
           <div className='search-result-container'>
             {[
@@ -47,10 +55,24 @@ class App extends Component {
           </div>
 
         </div>
-        <div className='wrapper-light-grey'>
-
-          <DisplayBoard secondarytwo={InstitutionCard}/>
+        <div className='institution-page-container'>
+          <InstitutionPage
+            data={
+              {
+                badges: ['satisfied', 'leader'],
+                courses: [
+                  {style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Newcastle University', courseName: 'Business Studies', rating: 4, noOfRatings: 300, author: 'Ian Jones'},
+                  {style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Newcastle University', courseName: 'Medicine', rating: 5, noOfRatings: 2009, author: 'Will Bower'},
+                  {style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Newcastle University', courseName: 'Law', rating: 4, noOfRatings: 376, author: 'Sally Jennings'},
+                ]
+              }
+            }
+          />
         </div>
+
+
+
+
       </div>
     )
   }

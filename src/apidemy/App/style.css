@@ -28,3 +28,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.search-result-filter-bar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

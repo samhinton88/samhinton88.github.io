@@ -1,0 +1,11 @@
+.institution-badge {
+  background: linear-gradient(#E74076, #874495, #0065B0);
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  margin-bottom: 10px;
+}

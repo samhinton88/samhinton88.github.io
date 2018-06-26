@@ -2,23 +2,23 @@ import React, { Component } from 'react';
 import style from './style.css'
 
 class DisplayBoard extends Component {
+  renderBulletPoints = () => {
+    const { bulletPoints } = this.props;
+
+    if(!bulletPoints) { return }
+
+    return bulletPoints.map((bp, i) => <li key={i}>{bp}</li>)
+  }
 
   render() {
-    console.log(this.props)
-    // const { style, institutionName, courseName, author, rating, noOfRatings } = this.props.data;
+    const { title } = this.props;
     return (
       <div className='display-board'>
         <div className='primary-item display-board-item'>
           <div className='component-description'>
-            <h4>Institution Card</h4>
+            <h4>{title}</h4>
             <ul>
-              <li>Maximum information on small surface area.</li>
-              <li>Eye-catching abstract colour on head, paper-white detail on body.</li>
-              <li>Shapes generated automatically, but are customisable.</li>
-              <li>Display average rating and number of ratings</li>
-              <li>Slight shadow to create depth.</li>
-              <li>Deeper shadow and slight colour change on hover.</li>
-              <li>Special status / badges can also be displayed.</li>
+              {this.renderBulletPoints()}
             </ul>
           </div>
         </div>

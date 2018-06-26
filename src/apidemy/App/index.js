@@ -86,7 +86,19 @@ class App extends Component {
             }
           />
         </div>
-        <MerchCoursePage data={{courseSummary: 'lalala', courseStructure: 'llalal'}}/>
+        <MerchCoursePage data={{
+          courseSummary:
+          `Your knowledge is contextualised, and your employability enhanced,
+          through our strong emphasis on practical real-world business experience.
+          This is via the use of case-study-led teaching and work experience opportunities
+          with globally recognised companies,
+          like IBM, Disney and Siemens.`,
+          rating: 5,
+          institutionName: 'University of Warwick',
+          courseName: 'Business Management BA Honours',
+          price: 2000,
+          courseStructure: 'llalal'}}
+          />
 
 
 

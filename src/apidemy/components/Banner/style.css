@@ -5,12 +5,49 @@
   display: flex;
   padding: 20px;
   font-family: helvetica;
+  justify-content: space-between;
 }
 
 .banner-left-section {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.banner-right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.banner-right-section-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+
+
+.merch-pricing {
+  font-size: 40px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+}
+
+.btn-buy-merch {
+  height: 50px;
+  background: #E74076;
+  color: white;
+  border: none;
+  transition: 0.5s;
+}
+
+
+.btn-buy-merch:hover {
+  background: transparent;
+  border: 1px solid white;
 }
 
 .banner h3 {

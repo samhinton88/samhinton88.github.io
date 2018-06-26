@@ -10,13 +10,14 @@ class InstitutionCard extends Component {
 
     const { style: { r, g, b}} = this.props.data;
 
-    return [10, 20, 25].map((rad) => {
+    return [10, 20, 25].map((rad, i) => {
       return (
         <circle
           cx='70'
           cy='50'
           r={`${rad}`}
           fill={`rgba(${r},${g}, ${b}, 0.4)`}
+          key={i + 'renderGraphic' + rad}
         />
       )
     })

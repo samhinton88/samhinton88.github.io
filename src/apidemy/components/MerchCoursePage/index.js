@@ -8,16 +8,24 @@ class MerchCoursePage extends Component {
 
 
   render() {
-    const { courseSummary, courseStructure } = this.props.data;
+    const {
+      courseSummary,
+      courseStructure,
+      courseName,
+      institutionName,
+      rating,
+      price
+    } = this.props.data;
 
     return (
       <div className='merch-course-page'>
         <Banner
           data={
             {
-              header: 'Business Management',
-              subHeader: 'University of Warwick',
-              rating: 5
+              header: courseName,
+              subHeader: institutionName,
+              rating,
+              price
             }
           }
         />

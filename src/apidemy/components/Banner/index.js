@@ -4,6 +4,16 @@ import style from './style.css'
 
 class Banner extends Component {
 
+  renderPrice = () => {
+    const { price } = this.props.data;
+
+    return (
+      <div className='merch-pricing'>
+        ${price}
+        <button className='btn-buy-merch'>Add to Cart</button>
+      </div>)
+  }
+
   render() {
     const {
       header,
@@ -11,10 +21,11 @@ class Banner extends Component {
       badges,
       background,
       type,
-      rating
+      rating,
+      price
     } = this.props.data;
 
-
+    console.log('price', price)
 
     return (
       <div
@@ -25,6 +36,11 @@ class Banner extends Component {
           <h3>{header}</h3>
           {rating ? <div><StarRating rating={rating} /></div>: ''}
           <h5>{subHeader}</h5>
+        </div>
+        <div className='banner-right-section'>
+          <div className='banner-right-section-bottom'>
+            {price ? this.renderPrice() : ''}
+          </div>
         </div>
       </div>
     )

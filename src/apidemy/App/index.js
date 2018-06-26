@@ -70,7 +70,7 @@ class App extends Component {
                 reviews: [
                   {
                     author: 'Sam Hinton',
-                    title: 'Really Friendly',
+                    title: 'Really qualified teachers',
                     content:
                       `I came here for a short course about business and I loved it.
                       The staff were extremely helpful and I was able to learn a lot about

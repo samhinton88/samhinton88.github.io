@@ -31,7 +31,7 @@ class App extends Component {
           }
         >
           <h2 style={{fontSize: '42px'}}>Apidemy</h2>
-          <span className='value-proposition'>Education beyond Borders</span>
+          <h2 className='value-proposition'>Education <span className='raise'>beyond</span> Borders</h2>
           <input className='search-bar' placeholder='search courses and schools...'/>
 
         </div>

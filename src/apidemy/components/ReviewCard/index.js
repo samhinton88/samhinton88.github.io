@@ -32,9 +32,15 @@ class ReviewCard extends Component {
         <div className='review-card-right'>
           <div className='review-card-content'>
             <h5>{title}</h5>
-            <p>{content}</p>
+            <div className='review-card-content-text'>
+              <p>{content}</p>
+              <div className='fade-out-text'></div>
+            </div>
           </div>
-
+          <div className='review-content-footer'>
+            <button className='btn-expand-review'>Read More</button>
+            <p>was this helpful?</p>
+          </div>
         </div>
 
       </div>

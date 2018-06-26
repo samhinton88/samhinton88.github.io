@@ -2,7 +2,7 @@
   display: flex;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   padding: 20px;
-
+  width: 50%;
 }
 
 .review-card-left {
@@ -10,10 +10,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 200px;
 }
 
 .review-card-right {
   padding-left: 20px;
+
 }
 
 .review-card-details {
@@ -22,6 +24,48 @@
 
 .review-card-content {
   margin-left: 10px;
-  text-align: right;
+  text-align: left;
   color: rgba(0, 0, 0, 0.8);
+  max-height: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.review-card-content-text {
+  text-overflow: ellipsis;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.fade-out-text {
+  background: linear-gradient(transparent, white);
+  width: 100%;
+  top: 70%;
+  left: 0;
+  height: 60px;
+  position: absolute;
+}
+
+.btn-expand-review {
+  height: 30px;
+  background: transparent;
+  font-family: helvetica;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-expand-review:hover {
+  background: rgba(196, 196, 218, 0.8)
+}
+
+.review-content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-content-footer p {
+  font-size: 12px;
+  color: rgba(50, 50, 50, 0.6);
+  cursor: pointer;
 }

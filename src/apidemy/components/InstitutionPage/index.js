@@ -47,7 +47,7 @@ class InstitutionPage extends Component {
           <div className='institution-page-body-left institution-page-body-section'>
             <h2>About</h2>
             <div className='institution-page-description-text-container'>
-            <p>At Newcastle University, we have always focused on academic excellence and the impact of our academic work. Today, these long-held ideals are more relevant than ever. They define our vision for the University – the kind of university we wish to be.</p>
+            <p>At Newcastle University, we have always focused on academic excellence and the impact of our academic work. Today, these long-held ideals are more relevant than ever. They define our vision for the University – the kind of university we wish to be. Our Internationalisation Strategy underpins our aim to be a world-class civic university. It intends to foster a culture receptive to interaction across the world and cross-cultural understanding, engaging all types of staff and students.</p>
             </div>
           </div>
           <div className='institution-page-body-right institution-page-body-section'>

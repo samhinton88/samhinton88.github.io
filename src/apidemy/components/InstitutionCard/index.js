@@ -39,6 +39,8 @@ class InstitutionCard extends Component {
           <svg height='100' width='200'>
             <circle cx='70' cy='50' r='30' fill='white'/>
             <circle cx='90' cy='70' r='20' fill='white'/>
+            <circle cx='100' cy='90' r='10' fill='white'/>
+            <circle cx='90' cy='70' r='20' fill='white'/>
             {this.renderGraphic()}
             {isTop ? <text x='130' y='40' r='5' fill='white' style={{font: 'bold 10px helvetica'}}>TOP SCHOOL</text> : ''}
           </svg>
@@ -46,8 +48,8 @@ class InstitutionCard extends Component {
         </div>
         <div className='institution-card-body'>
           <div className='institution-card-body-merchandising'>
-            <h3 className='institution-card-name'>{institutionName}</h3>
-            <p>{courseName}</p>
+            <h3 className='institution-card-name'>{courseName}</h3>
+            <p>{institutionName}</p>
             <p className='author-text'>{author}</p>
             <div className='institution-card-rating'>
               <span className='rating'>({noOfRatings})</span>

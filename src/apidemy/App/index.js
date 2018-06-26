@@ -68,7 +68,18 @@ class App extends Component {
                   {style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Newcastle University', courseName: 'Law', rating: 4, noOfRatings: 376, author: 'Sally Jennings'},
                 ],
                 reviews: [
-                  {author: 'Sam Hinton', title: 'Really Friendly', content: 'I came here for a short course about business and I loved it.', rating: 5, courseName: 'Business'}
+                  {
+                    author: 'Sam Hinton',
+                    title: 'Really Friendly',
+                    content:
+                      `I came here for a short course about business and I loved it.
+                      The staff were extremely helpful and I was able to learn a lot about
+                      the world of business. The best thing about the course was the lecturers,
+                      they were very well qualified and I alwas felt like I was getting value for money.
+                      I have enrolled on their second level business course and I can't wait to start
+                      in September.`,
+                    rating: 5, courseName: 'Business'
+                  }
                 ]
               }
             }

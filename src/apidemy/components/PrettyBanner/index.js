@@ -28,7 +28,7 @@ const animationMap = {
     fadeOut: 0,
     hasInner: false,
     innerOpacity: 0.2,
-    circleCount: 130,
+    circleCount: 150,
     lineCount: 10,
     isAnimated: true,
     speedMultiplier: 50,

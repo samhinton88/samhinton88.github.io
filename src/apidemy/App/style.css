@@ -33,15 +33,16 @@
 }
 
 .search-result-container-wrapper {
-  padding: 20px;
+  padding: 10px;
   width: 100%;
+
+
 /*  display: flex;
   justify-content: center;*/
 }
 
 .search-result-item-container {
-  width: 100%;
-  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;

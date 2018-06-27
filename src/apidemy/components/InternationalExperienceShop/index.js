@@ -13,6 +13,7 @@ class InternationalExperienceShop extends Component {
     return(
       <div className='international-experience-shop'>
         <Banner >
+          <i class="fas fa-shopping-cart experience-cart"></i>
           <h3>International Experience Shop</h3>
           <h1>Get the best out of the worlds best education system</h1>
         </Banner>

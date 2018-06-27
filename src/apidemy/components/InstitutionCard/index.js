@@ -59,7 +59,7 @@ class InstitutionCard extends Component {
         <div className='institution-card-body'>
           <div className='institution-card-body-merchandising'>
             <h3 className='institution-card-name'>{courseName}</h3>
-            <p>{institutionName}</p>
+            <p className='institution-name-text'>{institutionName}</p>
             {price ? <p>£{price}</p> : ''}
             <p className='author-text'>{author}</p>
             <div className='institution-card-rating'>

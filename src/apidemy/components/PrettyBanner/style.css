@@ -1,13 +1,14 @@
 .pretty-banner {
   width: 100%;
   height: 500px;
-  background: white;
+  background: transparent;
   position: relative;
 }
 
 .pretty-banner-svg {
   width: 100%;
   height: 100%;
+  background: transparent;
 }
 
 .pretty-banner-content {
@@ -55,4 +56,16 @@
 
 .anim button:focus {
   background: rgba(30, 30, 30, 0.3)
+}
+
+.user-inputted-header {
+  color: red;
+  font-size: 40px;
+  font-family: helvetica;
+}
+
+.user-header-input {
+  width: 200px;
+  height: 50px;
+  font-size: 14px;
 }

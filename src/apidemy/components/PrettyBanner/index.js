@@ -8,10 +8,10 @@ const animationMap = {
     startRadius: 120,
     radiusStep: -10,
     squeeze: 0,
-    primaryOpacity: 1,
+    primaryOpacity: 0.7,
     fadeOut: 0,
     hasInner: true,
-    innerOpacity: 0.3,
+    innerOpacity: 0.1,
     circleCount: 12,
     lineCount: 1,
     isAnimated: true,
@@ -41,7 +41,9 @@ const colorMap = {
   lightblue: { r:0, g:101, b:176},
   bloodred: { r:200, g:20, b:20},
   green: { r: 20, g: 200, b: 20},
-  pink: { r:231, g:64, b:118 }
+  pink: { r:231, g:64, b:118 },
+  white: { r:255, g:255, b:255},
+  transparent: undefined
 }
 
 
@@ -49,9 +51,12 @@ class PrettyBanner extends Component {
   state = {
     clock: 0,
     forward: true,
-    animationState: 'dna',
+    animationState: 'dragon',
     primaryColor: 'bloodred',
-    speedAlteration: 0
+    speedAlteration: 0,
+    value: '',
+    header: '',
+    background: 'transparent'
   }
 
   componentDidMount() {
@@ -65,7 +70,7 @@ class PrettyBanner extends Component {
   }
 
   renderText = () => {
-
+    return this.state.header;
   }
 
   renderBtnStyle = (btn) => {
@@ -77,10 +82,22 @@ class PrettyBanner extends Component {
   renderColBtns = () => {
     const { btnStyles } = this.state;
 
-    return Object.keys(colorMap).map((col) => {
+    return Object.keys(colorMap).filter((i) => i !== 'transparent' ).map((col) => {
       return (
         <button
           onClick={() => this.setState({primaryColor: col})}
+        >
+          {col}
+        </button>
+      )
+    })
+  }
+
+  renderBckBtns = () => {
+    return Object.keys(colorMap).map((col) => {
+      return (
+        <button
+          onClick={() => this.setState({background: col})}
         >
           {col}
         </button>
@@ -156,17 +173,40 @@ class PrettyBanner extends Component {
     return circles.reverse();
   }
 
+  handleChange = (e) => {
+    this.setState({value: e.target.value})
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.setState({header: this.state.value, value: ''})
+  }
+
+  renderBackgroundStyle = () => {
+    return { background: this.state.background }
+  }
+
   render() {
     const { clock, speedAlteration } = this.state;
 
 
     return (
       <div className='pretty-banner'>
-        <svg className='pretty-banner-svg' viewbox='0 0 1000 500'>
+        <h1>Animated Banner</h1>
+        <svg className='pretty-banner-svg' viewbox='0 0 1000 500' style={this.renderBackgroundStyle()}>
           <g >
           {this.renderGraphics()}
           </g>
-          {this.renderText()}
+          <text
+            className='user-inputted-header'
+            x='500'
+            y='250'
+            style={['transparent','white'].includes(this.state.background)
+                    ? {fill: 'black'}
+                    : {fill: 'white'}}
+          >
+            {this.renderText()}
+          </text>
         </svg>
         <div className='pretty-banner-content'>
 
@@ -180,7 +220,19 @@ class PrettyBanner extends Component {
             <h4>Choose a Color</h4>
             {this.renderColBtns()}
           </div>
-
+          <div className='color-selection anim'>
+            <h4>Choose a Background Color</h4>
+            {this.renderBckBtns()}
+          </div>
+          <div className='color-selection anim'>
+            <input
+              onChange={(e) => this.handleChange(e)}
+              value={this.state.value}
+              placeholder='enter a header'
+              className='user-header-input'
+            />
+            <button onClick={this.handleSubmit}>add header</button>
+          </div>
         </div>
       </div>
     )

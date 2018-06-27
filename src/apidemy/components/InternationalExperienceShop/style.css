@@ -1,0 +1,13 @@
+.search-filter-bar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.shop-search-result-list-container {
+  display: block;
+}
+
+.shop-search-result-list-wrapper {
+  padding-left: 150px;
+  padding-right: 150px;
+}

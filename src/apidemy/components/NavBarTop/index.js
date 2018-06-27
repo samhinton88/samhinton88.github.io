@@ -12,10 +12,7 @@ class NavBarTop extends Component {
         </div>
         <div className='nav-bar-right'>
           <div>
-            <svg width='100' height='50'>
-              <circle cx='21' cy='25' r='20' fill='transparent' stroke='rgba(0, 0, 0, 0.5)'/>
-              <text x='6' y='28' style={{font: 'bold 10px helvetica'}}>SHOP</text>
-            </svg>
+            <i class="fas fa-shopping-cart cart"></i>
           </div>
           <div>
             <span className='user-courses-link'>My Courses</span>

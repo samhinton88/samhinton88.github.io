@@ -3,6 +3,7 @@ import style from './style.css';
 
 import SearchFilterBar from '../SearchFilterBar';
 import SearchResultList from '../SearchResultList';
+import Banner from '../Banner';
 
 class InternationalExperienceShop extends Component {
 
@@ -11,8 +12,18 @@ class InternationalExperienceShop extends Component {
 
     return(
       <div className='international-experience-shop'>
-        <SearchFilterBar options={['Business', 'Economics', 'Accountancy']}/>
-        <SearchResultList data={this.props.data}/>
+        <Banner >
+          <h3>International Experience Shop</h3>
+          <h1>Get the best out of the worlds best education system</h1>
+        </Banner>
+        <div className='search-filter-bar-container'>
+          <SearchFilterBar options={['Business', 'Economics', 'Accountancy']}/>
+        </div>
+        <div className='shop-search-result-list-wrapper'>
+          <div className='shop-search-result-list-container'>
+            <SearchResultList data={this.props.data}/>
+          </div>
+        </div>
       </div>
     )
   }

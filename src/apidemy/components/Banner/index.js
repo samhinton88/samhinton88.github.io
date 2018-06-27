@@ -15,6 +15,8 @@ class Banner extends Component {
   }
 
   render() {
+    if(!this.props.data) { return <div className='banner banner-generic'>{this.props.children}</div>}
+
     const {
       header,
       subHeader,
@@ -25,7 +27,7 @@ class Banner extends Component {
       price
     } = this.props.data;
 
-    console.log('price', price)
+
 
     return (
       <div
@@ -33,9 +35,9 @@ class Banner extends Component {
        style={background || {background: 'linear-gradient(90deg, #E74076, #874495, #0065B0)'}}
        >
         <div className='banner-left-section'>
-          <h3>{header}</h3>
+          {header ? <h3>{header}</h3> : ''}
           {rating ? <div><StarRating rating={rating} /></div>: ''}
-          <h5>{subHeader}</h5>
+          {subHeader ? <h5>{subHeader}</h5> : ''}
         </div>
         <div className='banner-right-section'>
           <div className='banner-right-section-bottom'>

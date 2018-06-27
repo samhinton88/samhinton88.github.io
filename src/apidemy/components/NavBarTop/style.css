@@ -5,6 +5,7 @@
   padding: 20px;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .avatar {
@@ -16,12 +17,30 @@
 
 .nav-bar-right {
   display: flex;
-  flex-direction: row;
+  width: 200px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .user-courses-link {
   margin-right: 10px;
   font: 15px helvetica ;
   color: rgba(0, 0, 0, 0.6);
+}
+
+.cart {
+  font-size: 30px;
+  color: #0065B0;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart:hover {
+  color: white;
+  background: #0065B0;
 }

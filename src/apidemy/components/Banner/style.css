@@ -1,11 +1,19 @@
 .banner {
   width: 100%;
   height: 400px;
-  background: black;
+  background: linear-gradient(90deg, #E74076, #874495, #0065B0);
   display: flex;
   padding: 20px;
   font-family: helvetica;
   justify-content: space-between;
+}
+
+.banner-generic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .banner-left-section {

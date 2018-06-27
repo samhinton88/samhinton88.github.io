@@ -5,6 +5,7 @@ import NavBarTop from '../components/NavBarTop';
 import SearchFilterBar from '../components/SearchFilterBar';
 import InstitutionPage from '../components/InstitutionPage';
 import MerchCoursePage from '../components/MerchCoursePage';
+import InternationalExperienceShop from '../components/InternationalExperienceShop';
 import style from './style.css'
 
 
@@ -97,7 +98,7 @@ class App extends Component {
           emphasis on helping you develop practical skills for your future career.`,
           rating: 5,
           institutionName: 'University of Warwick',
-          courseName: 'Business Management BA Honours',
+          courseName: 'Business Management Summer Experience',
           price: 2000,
           courseStructure:
             [

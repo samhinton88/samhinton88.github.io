@@ -18,9 +18,6 @@ class RankingBox extends Component {
       const nearToThird = 1 / Math.abs(2 - i);
       const scale = 1 - (absDist / 10)
 
-
-      console.log(r.institutionName,scale)
-
       return (
         <div
           className={'ranking-row' + classActive}
@@ -34,7 +31,7 @@ class RankingBox extends Component {
             {r.institutionName}
           </div>
           <div>
-            {r.ranking}
+            {r.ranking}th
 
           </div>
         </div>)

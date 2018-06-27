@@ -8,10 +8,10 @@ const animationMap = {
     startRadius: 120,
     radiusStep: -10,
     squeeze: 0,
-    primaryOpacity: 0.9,
-    fadeOut: -0.05,
+    primaryOpacity: 1,
+    fadeOut: 0,
     hasInner: true,
-    innerOpacity: 0.2,
+    innerOpacity: 0.3,
     circleCount: 12,
     lineCount: 1,
     isAnimated: true,
@@ -20,19 +20,19 @@ const animationMap = {
   },
   dna: {
     start: 10,
-    step: 50,
+    step: 10,
     startRadius: 10,
     radiusStep: 0,
     squeeze: 0,
-    primaryOpacity: 0.5,
+    primaryOpacity: 0.1,
     fadeOut: 0,
     hasInner: false,
     innerOpacity: 0.2,
-    circleCount: 25,
-    lineCount: 2,
+    circleCount: 130,
+    lineCount: 10,
     isAnimated: true,
     speedMultiplier: 50,
-    speedDiff: 25,
+    speedDiff: 20,
     directionAlgorithm: 'flip'
   }
 }
@@ -44,12 +44,14 @@ const colorMap = {
   pink: { r:231, g:64, b:118 }
 }
 
+
 class PrettyBanner extends Component {
   state = {
     clock: 0,
     forward: true,
-    animationState: 'dragon',
-    primaryColor: 'bloodred'
+    animationState: 'dna',
+    primaryColor: 'bloodred',
+    speedAlteration: 0
   }
 
   componentDidMount() {
@@ -66,8 +68,24 @@ class PrettyBanner extends Component {
 
   }
 
+  renderBtnStyle = (btn) => {
+    const { btnStyles } = this.state;
+
+    return btnStyles[btn];
+  }
+
   renderColBtns = () => {
-    return Object.keys(colorMap).map((col) => <button onClick={() => this.setState({primaryColor: col})}>{col}</button>)
+    const { btnStyles } = this.state;
+
+    return Object.keys(colorMap).map((col) => {
+      return (
+        <button
+          onClick={() => this.setState({primaryColor: col})}
+        >
+          {col}
+        </button>
+      )
+    })
   }
 
   renderAnimBtns = () => {
@@ -78,7 +96,8 @@ class PrettyBanner extends Component {
     const {
       clock,
       animationState,
-      primaryColor
+      primaryColor,
+      speedAlteration
     } = this.state;
 
     const {
@@ -113,13 +132,9 @@ class PrettyBanner extends Component {
       for (let j=0;j<circleCount;j++) {
 
         const cx = start + (j * step),
-              cy = 250 + (direction * (100 * Math.sin(j + ((clock / speedMultiplier) + (i * speedDiff) ) ))),
+              cy = 250 + (direction * (100 * Math.sin(j + ((clock / (speedMultiplier + speedAlteration)) + (i * speedDiff) ) ))),
               rad  = startRadius + (radiusStep * j) + (Math.sin(clock / 200) * squeeze),
               fill = `rgba(${r}, ${g}, ${b}, ${primaryOpacity + (fadeOut * j)})`;
-
-        circles.push(
-          <circle cx={cx} cy={cy} r={rad} fill={fill}/>
-        )
 
         if (hasInner) {
           circles.push(
@@ -131,16 +146,31 @@ class PrettyBanner extends Component {
             />
           )
         }
+
+        circles.push(
+          <circle cx={cx} cy={cy} r={rad} fill={fill}/>
+        )
+
       }
     }
     return circles.reverse();
   }
 
   render() {
-    const { clock } = this.state;
+    const { clock, speedAlteration } = this.state;
+
 
     return (
       <div className='pretty-banner'>
+        <svg className='pretty-banner-svg' viewbox='0 0 1000 500'>
+          <g >
+          {this.renderGraphics()}
+          </g>
+          {this.renderText()}
+        </svg>
+        <div className='pretty-banner-content'>
+
+        </div>
         <div className='selectors'>
           <div className='animation-selection anim'>
             <h4>Choose an Animation</h4>
@@ -150,14 +180,6 @@ class PrettyBanner extends Component {
             <h4>Choose a Color</h4>
             {this.renderColBtns()}
           </div>
-        </div>
-        <svg className='pretty-banner-svg' viewbox='0 0 1000 500'>
-          <g >
-          {this.renderGraphics()}
-          </g>
-          {this.renderText()}
-        </svg>
-        <div className='pretty-banner-content'>
 
         </div>
       </div>

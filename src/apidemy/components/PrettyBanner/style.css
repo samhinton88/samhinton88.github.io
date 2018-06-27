@@ -2,9 +2,57 @@
   width: 100%;
   height: 500px;
   background: white;
+  position: relative;
 }
 
 .pretty-banner-svg {
   width: 100%;
   height: 100%;
+}
+
+.pretty-banner-content {
+  font-family: helvetica;
+  position: absolute;
+  top: 250px;
+  left: 500px;
+  color: rgba(0, 101, 176, 0.8);
+
+
+}
+
+.selectors {
+  display: flex;
+  justify-content: center;
+
+}
+
+.animation-selection button:hover {
+  background: rgba(200, 0, 0, 0.5)
+}
+
+.color-selection button:hover {
+  background: rgba(0, 0, 200, 0.5)
+}
+
+.anim {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+.anim button {
+  width: 100px;
+  height: 40px;
+  background: transparent;
+  transition: 0.5s;
+  border-radius: 3px;
+}
+
+.anim button:hover {
+  color: white;
+}
+
+.anim button:focus {
+  background: rgba(30, 30, 30, 0.3)
 }

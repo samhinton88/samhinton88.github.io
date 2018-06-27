@@ -3,15 +3,20 @@ import search from './style.css'
 
 class SearchFilterBar extends Component {
 
+  renderFilterOptions = () => {
+    const { options } = this.props;
+    if(!options){return}
+
+    return options.map((o) => <div className='filter-option'>{o}</div>)
+  }
+
   render() {
 
     return (
       <div className='search-filter-bar'>
         <div className='filter-option-container'>
           <div className='filter-option filter-select'>All filters</div>
-          <div className='filter-option'>Business and Economics (30)</div>
-          <div className='filter-option'>Accountancy (10)</div>
-          <div className='filter-option'>Law (2)</div>
+          {this.renderFilterOptions()}
         </div>
       </div>
     )

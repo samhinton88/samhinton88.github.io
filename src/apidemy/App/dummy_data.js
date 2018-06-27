@@ -9,6 +9,13 @@ export const searchResultData = [
               {style: {r: 100, g: 220, b: 22}, institutionName: 'Hull University', courseName: 'Business Studies', rating: 1, noOfRatings: 3019, author: 'Sarah Hawks'},
              ];
 
+export const shopSearchResultData = [
+              {price: 1000, style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Oxford University', courseName: 'Business Studies Summer Experience', rating: 4, noOfRatings: 2003, author: 'Alice Stevens'},
+              {price: 1000, style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Oxford University', courseName: 'Business Studies Summer Experience', rating: 4, noOfRatings: 2003, author: 'Alice Stevens'},
+              {price: 1000, style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Oxford University', courseName: 'Business Studies Summer Experience', rating: 4, noOfRatings: 2003, author: 'Alice Stevens'},
+              {price: 1000, style: {r: 100, g: 100, b: 220}, isTop: true, institutionName: 'Oxford University', courseName: 'Business Studies Summer Experience', rating: 4, noOfRatings: 2003, author: 'Alice Stevens'}
+]
+
 export const courseData = {
           courseSummary:
           `Your knowledge is contextualised, and your employability enhanced,

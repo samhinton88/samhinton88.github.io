@@ -6,9 +6,15 @@ import SearchFilterBar from '../components/SearchFilterBar';
 import InstitutionPage from '../components/InstitutionPage';
 import MerchCoursePage from '../components/MerchCoursePage';
 import InternationalExperienceShop from '../components/InternationalExperienceShop';
+import SearchResultList from '../components/SearchResultList';
 import style from './style.css';
 
-import { searchResultData, courseData, institutionData } from './dummy_data';
+import {
+  searchResultData,
+  courseData,
+  institutionData,
+  shopSearchResultData
+} from './dummy_data';
 
 
 class App extends Component {
@@ -40,15 +46,16 @@ class App extends Component {
 
         </div>
         <div className='search-result-filter-bar-wrapper'>
-          <SearchFilterBar />
+          <SearchFilterBar options={['Business', 'Economics', 'Accountancy']}/>
         </div>
 
 
 
         <div className='search-result-container-wrapper'>
-          <div className='search-result-container'>
+          <SearchResultList data={searchResultData} />
+         {/* <div className='search-result-container'>
             {searchResultData.map((s) => <div className='search-result-item-container'><InstitutionCard data={s} /></div>)}
-          </div>
+         </div>*/}
 
         </div>
         <div className='institution-page-container'>
@@ -58,7 +65,7 @@ class App extends Component {
         </div>
         <MerchCoursePage data={courseData}
           />
-          <InternationalExperienceShop />
+          <InternationalExperienceShop data={shopSearchResultData}/>
 
 
 

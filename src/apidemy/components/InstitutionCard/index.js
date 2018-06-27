@@ -32,7 +32,16 @@ class InstitutionCard extends Component {
   }
 
   render() {
-    const { style: {r, g, b}, isTop, institutionName, courseName, author, rating, noOfRatings } = this.props.data;
+    const {
+      style: {r, g, b},
+      isTop,
+      institutionName,
+      courseName,
+      author,
+      rating,
+      noOfRatings,
+      price
+    } = this.props.data;
 
     return (
       <div className='institution-card'>
@@ -51,6 +60,7 @@ class InstitutionCard extends Component {
           <div className='institution-card-body-merchandising'>
             <h3 className='institution-card-name'>{courseName}</h3>
             <p>{institutionName}</p>
+            {price ? <p>£{price}</p> : ''}
             <p className='author-text'>{author}</p>
             <div className='institution-card-rating'>
               <span className='rating'>({noOfRatings})</span>

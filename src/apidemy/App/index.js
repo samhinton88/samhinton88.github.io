@@ -7,7 +7,10 @@ import InstitutionPage from '../components/InstitutionPage';
 import MerchCoursePage from '../components/MerchCoursePage';
 import InternationalExperienceShop from '../components/InternationalExperienceShop';
 import SearchResultList from '../components/SearchResultList';
+import PrettyBanner from '../components/PrettyBanner';
+
 import style from './style.css';
+
 
 import {
   searchResultData,
@@ -63,15 +66,9 @@ class App extends Component {
             data={institutionData}
           />
         </div>
-        <MerchCoursePage data={courseData}
-          />
-          <InternationalExperienceShop data={shopSearchResultData}/>
-
-
-
-
-
-
+        <MerchCoursePage data={courseData}/>
+        <InternationalExperienceShop data={shopSearchResultData}/>
+        <PrettyBanner />
       </div>
     )
   }

@@ -52,11 +52,11 @@ class PrettyBanner extends Component {
     clock: 0,
     forward: true,
     animationState: 'dragon',
-    primaryColor: 'bloodred',
+    primaryColor: 'white',
     speedAlteration: 0,
     value: '',
     header: '',
-    background: 'transparent'
+    background: 'pink'
   }
 
   componentDidMount() {

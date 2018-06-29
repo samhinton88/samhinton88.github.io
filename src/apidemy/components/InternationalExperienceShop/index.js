@@ -9,6 +9,9 @@ class InternationalExperienceShop extends Component {
 
   render() {
     // access to shop data
+    const flags = [
+
+    ]
 
     return(
       <div className='international-experience-shop'>

@@ -192,7 +192,7 @@ class PrettyBanner extends Component {
 
     return (
       <div className='pretty-banner'>
-        <h1>Animated Banner</h1>
+        <h1>Cindy The Dragon</h1>
         <svg className='pretty-banner-svg' viewbox='0 0 1000 500' style={this.renderBackgroundStyle()}>
           <g >
           {this.renderGraphics()}

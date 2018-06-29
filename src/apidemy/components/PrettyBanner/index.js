@@ -39,10 +39,12 @@ const animationMap = {
 
 const colorMap = {
   lightblue: { r:0, g:101, b:176},
-  bloodred: { r:200, g:20, b:20},
+  red: { r:200, g:20, b:20},
   green: { r: 20, g: 200, b: 20},
   pink: { r:231, g:64, b:118 },
   white: { r:255, g:255, b:255},
+  violet: { r:174, g:129, b:255 },
+  orange: { r:231, g:164, b:50 },
   transparent: undefined
 }
 
@@ -189,7 +191,7 @@ class PrettyBanner extends Component {
   render() {
     const { clock, speedAlteration } = this.state;
 
-
+    console.log(this.state.background)
     return (
       <div className='pretty-banner'>
         <h1>Cindy The Dragon</h1>
